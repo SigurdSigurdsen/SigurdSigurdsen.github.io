@@ -47,6 +47,18 @@ li a:hover:not(.active) {
   <li><a href="praise">HOW TO PRAISE</a></li>
   <li><a href="tour">OGRELORD 2017 TOUR</a></li>
 </ul>
+<div id="music">
+<audio autoplay id="musik">
+  <source src="CoryRemix.m4a" type="audio/mpeg">
+  <p>If you can read this, your browser does not support the audio element.</p>
+</audio>
+<script>
+var vid = document.getElementById("musik");
+function setNoVolume() { 
+    vid.volume = 0.0;
+} 
+</script>
+<button onclick="setNoVolume()" type="button">Stop music</button>
 <p><font size="80" color="white" face="impact">SHREK IS THE GREAT OGRELORD</font></p>
 <p><font size="30" color="white" face="comic sans ms">HE WILL KILLS U IF YOU WORSHIP ANYONE ELSE</font></p>
 <p><font size="30" color="white" face="Blackadder ITC">The ogrelord has class</font></p>
@@ -81,7 +93,7 @@ src="https://www.youtube.com/embed/tII-duWFrQ0">
 </iframe>
 <div id="music">
 <audio autoplay>
-  <source src="beef.mp3" type="audio/mpeg">
+  <source src="beef.mp3" type="audio/mpeg" id="beef">
   <p>If you can read this, your browser does not support the audio element.</p>
 </audio>
 </div>
