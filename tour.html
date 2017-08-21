@@ -1,5 +1,7 @@
 <html>
 <head>
+  <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
 <link rel="icon" href="favicon.png" type="image/png" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <style type="text/css">
@@ -61,7 +63,7 @@ li a:hover:not(.active) {
 <p>
 <h2>Boi have u ever wanted to meet da ogrelord? ofc u have.</h2>	
 </p>	
-<h2>Da ogrlord be coming to a swamp near you</h2>	
+<h2>Da ogrelord be coming to a swamp near you</h2>	
 <h3>Featuring the one and only Donkey</h3>
 <img src="http://stuffpoint.com/shrek/image/37617-shrek-donkey-singing.jpg" width="400" height="300" border="4">
 <p><h3>Where da ogrelord show hits</h3></p>	
@@ -73,11 +75,45 @@ li a:hover:not(.active) {
 	<li>nigger</li>
 	<li>nigger</li>
 </ul>
-	
-	
-	
+<!DOCTYPE html>
+
+
+  <div id="map" style="width: 500px; height: 400px;"></div>
+
+  <script type="text/javascript">
+    var locations = [
+      ['Astana, Kazakhstan', 51.139425, 71.468559, 4],
+      ['Fucking, Austria', 48.067211, 12.862560],
+      ['Diller, Nebraska', 40.108456, -96.935999, 3],
+      ['Pikhedevej, Fur', 56.823738, 9.009253, 2],
+      ['Pyongyamg, North Korea', 39.017823, 1215.763465, 1]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 1,
+      center: new google.maps.LatLng(0.0, 0.0),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+
 </body>
-
-
 
 </html>
