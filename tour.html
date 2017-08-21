@@ -1,7 +1,7 @@
 <html>
 <head>
      <style>
-       #mapperino {
+       #map {
         height: 400px;
         width: 50%;
        }
@@ -123,29 +123,7 @@ li a:hover:not(.active) {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX0FYwSVhutNihePRdQt-jEJ--B3uvCio&callback=initMap">
     </script>
 
-    <div id="mapperino"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-		var Kazakhstan = {lat: 51.139425, lng: 71.468559};
-        var map = new google.maps.Map(document.getElementById('mapperino'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: mapperino
-        });
-		        });
-        var marker = new google.maps.Marker({
-          position: Kazakhstan,
-          map: mapperino
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX0FYwSVhutNihePRdQt-jEJ--B3uvCio&callback=initMap">
-    </script>
-  </body>
+
+</body>
 
 </html>
