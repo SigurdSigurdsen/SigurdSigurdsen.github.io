@@ -65,7 +65,7 @@ li a:hover:not(.active) {
 	<title>2017 tour</title>
 </head>	
 <body bgcolor="#00E32F">
-<h1>OGRELORD TOUR 2017 COMING TO A CITY NEAR YOU</h1>	
+<h1>OGRELORD 2017 TOUR COMING TO A CITY NEAR YOU</h1>	
 <p>
 <h2>Boi have u ever wanted to meet da ogrelord? ofc u have.</h2>	
 </p>	
@@ -90,6 +90,7 @@ li a:hover:not(.active) {
         var uluru = {lat: -25.363, lng: 131.044};
 		var center = {lat: 0.0, lng: 0.0};
 		var Fucking = {lat: 48.067211, lng: 12.862560};  
+		var Kazakhstan = {lat: 47.827646, lng: 67.680191};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 1,
           center: center
@@ -102,6 +103,10 @@ li a:hover:not(.active) {
           position: Fucking,
           map: map
         });
+		var marker = new google.maps.Marker({
+          position: Kazakhstan,
+          map: map
+        });  
 		  
       }
     </script>
